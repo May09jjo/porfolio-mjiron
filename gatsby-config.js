@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Michael Jiron Desarrollor Web`,
+    title: `Michael Jiron`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@mjiron`,
     siteUrl: `http://localhost`,
     capitalizeTitleOnHome: true,
     logo: `/images/logo.png`,
+    titleImage: `/images/wall.jpg`,
+    introTag: `PHOTOGRAPHER | VIDEOGRAPHER`,
     darkmode: true,
     switchTheme: true,
     navLinks: [

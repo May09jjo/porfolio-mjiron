@@ -5,10 +5,10 @@ nav {
 	position: fixed;
 	width: 100%;
 	justify-content: space-between;
-	padding: 22px 44px;
+	padding: 20px 40px;
 	align-items: center;
 	z-index: 99;
-	// transition: height .25s;
+	transition: height .25s;
 
 	#menu-open{
 		position: absolute;
@@ -26,6 +26,7 @@ nav {
 		height: auto;
 		align-items: center;
 		transition: width 0.25s;
+		margin: 0;
 	}
 
 	&.scrolled {
@@ -38,7 +39,7 @@ nav {
 
 	ul {
 		list-style: none;
-
+		margin-bottom: 0px;
 		li {
 			display: inline-block;
 			vertical-align: middle;

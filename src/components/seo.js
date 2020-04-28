@@ -69,7 +69,8 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/akzhy/trunk/dist/trunk.min.css" />
+      
     </Helmet>
   )
 }
