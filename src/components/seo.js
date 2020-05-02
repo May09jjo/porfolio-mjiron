@@ -70,7 +70,8 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/akzhy/trunk/dist/trunk.min.css" />
-      
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&display=swap" rel="stylesheet"/>
+
     </Helmet>
   )
 }
