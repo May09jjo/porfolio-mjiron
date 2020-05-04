@@ -25,7 +25,7 @@ class IndexPage extends React.Component {
 
     componentDidMount() {
         
-        this.setWindowHeight();
+        //this.setWindowHeight();
 
         window.addEventListener("resize", this.setWindowHeight);
 
@@ -64,9 +64,8 @@ class IndexPage extends React.Component {
         }
     }
 
-    setWindowHeight() {
-        // this.setState({ winHeight: window.innerHeight });
-        console.log('set resize height')
+    setWindowHeight = () => {
+        this.setState({ winHeight: window.innerHeight });
     }
 
     render() {
