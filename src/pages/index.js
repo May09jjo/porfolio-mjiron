@@ -1,7 +1,9 @@
 import React from "react";
-import Layout from "../components/layout";
+import TextLoop from "react-text-loop";
 import { graphql } from "gatsby";
+import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Image from "../components/image";
 
 import "../style/wall.less";
 
@@ -69,78 +71,52 @@ class IndexPage extends React.Component {
     }
 
     render() {
-       
+            const { title, description } = this.props.data.site.siteMetadata;
         return (
             <Layout placeholder={false}>
                 <SEO
                     lang="es"
                     title={this.props.data.site.siteMetadata.title}
                 />
-                <div
-                    className="wall"
-                    style={{ height: this.state.winHeight + "px" }}
-                >
+                <div className="wall" style={{ height: this.state.winHeight + "px" }} >
+
                     <div className="intro container">
+                    <div className="row flex f-aling-center">
+                        <div className="col xl5"><div className="designer-thumbnail">
+                            <Image/>
+                        </div></div>
+
+                        <div className="col xl7 text-left">
                         <div className="main-title text-primary">
-                            <svg
-                                width="90%"
-                                height="220px"
-                                viewBox="0 0 100 100"
-                                preserveAspectRatio="xMidYMid slice"
-                                ref={c => (this.svg = c)}
-                            >
-                                {this.props.data.site.siteMetadata
-                                    .capitalizeTitleOnHome
-                                    ? this.props.data.site.siteMetadata.title.toUpperCase()
-                                    : this.props.data.site.siteMetadata.title}
-                                <pattern
-                                    id="wallPattern"
-                                    patternUnits="userSpaceOnUse"
-                                    width="100"
-                                    height="100"
-                                >
-                                    <rect
-                                        x="0"
-                                        y="0"
-                                        className="fill-primary"
-                                        width="100"
-                                        height="100"
-                                    />
-                                    <image
-                                        xlinkHref="/images/wall.jpg"
-                                        height="100"
-                                        width="100"
-                                        y="0"
-                                        preserveAspectRatio="none"
-                                    ></image>
+                           <div className="position-image" >
+                           <svg width="100%" height="110px" viewBox="16 0 80 100" preserveAspectRatio="xMidYMid slice" ref={c => (this.svg = c)} >
+                                { title }
+                                <pattern id="wallPattern" patternUnits="userSpaceOnUse" width="100" height="100" >
+                                    <rect x="0" y="0" className="fill-primary" width="100" height="100" />
+                                    <image xlinkHref="/images/rainbow.svg" height="100" width="100" y="0" preserveAspectRatio="none" ></image>
                                 </pattern>
-                                <text
-                                    fill="url(#wallPattern)"
-                                    textAnchor="middle"
-                                    x="50"
-                                    y="50"
-                                >
-                                    {this.props.data.site.siteMetadata
-                                        .capitalizeTitleOnHome
-                                        ? this.props.data.site.siteMetadata.title.toUpperCase()
-                                        : this.props.data.site.siteMetadata
-                                              .title}
-                                </text>
+                                <text fill="url(#wallPattern)" textAnchor="middle" x="50" y="53" > { title } </text>
                             </svg>
+                           </div>
                         </div>
-                        <p className="tag-line text-secondary">
-                            {this.props.data.site.siteMetadata.introTag}
-                        </p>
-                        <p className="caption text-tertiary">
-                            {this.props.data.site.siteMetadata.description}
-                        </p>
+
+                        <p className="tag-line text-secondary"> {this.props.data.site.siteMetadata.introTag} </p>
+                        <p className="caption text-tertiary"> {this.props.data.site.siteMetadata.description} </p>
+
+                        <TextLoop>
+                                <span> UX Designer.</span>
+                                <span> UI Designer.</span>
+                                <span> Content Writter.</span>
+                        </TextLoop>{" "}
                         <a href="#portfolio" className="btn">
                             SEE WORKS
                         </a>
+                        </div>
                     </div>
-                    <div className="social-buttons">
-                                      
                     </div>
+
+                    <div className="social-buttons"> </div>
+
                 </div>
             </Layout>
         );

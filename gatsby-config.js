@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Michael Jiron`,
+    title: `Michael Jirón`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@mjiron`,
     siteUrl: `http://localhost`,
@@ -53,7 +53,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/images`,
       },
     },
     `gatsby-transformer-sharp`,
