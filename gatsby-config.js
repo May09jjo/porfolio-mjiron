@@ -1,12 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Michael Jirón`,
+    subtitle: `Bienvenido a mi mundo`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@mjiron`,
     siteUrl: `http://localhost`,
-    capitalizeTitleOnHome: true,
     logo: `/images/logo.png`,
-    titleImage: `/images/wall.jpg`,
     introTag: `PHOTOGRAPHER | VIDEOGRAPHER`,
     darkmode: true,
     switchTheme: true,
@@ -32,6 +31,35 @@ module.exports = {
             url: "/contact"
         }
     ],
+    listMainSkills: [
+      {
+        mainSkill: `Web Developer`,
+      },
+      {
+        mainSkill: `Mobile Developer`,
+      },
+      {
+        mainSkill: `UI/UX Designer`,
+      }
+    ],
+    social: [
+      {
+          name: "Github",
+          icon: "/images/Facebook.svg",
+          url: "#"
+      },
+      {
+          name: "Twitter",
+          icon: "/images/Twitter.svg",
+          url: "#"
+      },
+      {
+          name: "Linkedin",
+          icon: "/images/Instagram.svg",
+          url: "#"
+      }
+    ],
+
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

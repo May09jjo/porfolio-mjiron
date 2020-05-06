@@ -10,16 +10,35 @@
 
 	.intro {
 
-		.tag-line {
-			font-size: 20px;
-			font-weight: bold;
-			letter-spacing: 1px;
+		.inner {
+
+			span.sub-title {
+				font-size: 15px;
+				text-transform: uppercase;
+				letter-spacing: 4px;
+				display: block;
+				margin-bottom: 20px;
+			}
+			.h1SvgName { margin-bottom: 0; }
+
+			.mainSkillClass {
+				font-size: 85px;
+				font-weight: bold;
+				font-family: 'Poppins', sans-serif;
+				line-height: 90px;
+				text-transform: inherit;
+			 }
 		}
 
-		.caption {
-			font-size: 16px;
-			margin: 15px 0;
+		.designer-thumbnail {
+			width: 85%;
+			img {
+				border-radius: 100%;
+				padding: 0;
+				border: 12px solid #fff;
+			}
 		}
+
 	}
 
 	svg {
@@ -27,37 +46,7 @@
 		margin: 0 auto;
 	}
 
-	.social-buttons {
-		position: absolute;
-		left: 25px;
 
-		ul {
-			list-style: none;
-
-			li {
-				margin: 5px 0;
-				img {
-					opacity: 0.7;
-					width: 48px;
-					transition: opacity .25s;
-				}
-
-				&:hover{
-					img{
-						opacity: 1;
-					}
-				}
-			}
-		}
-	}
-	.designer-thumbnail {
-		width: 85%;
-		img {
-			border-radius: 100%;
-			padding: 0;
-			border: 12px solid #fff;
-		}
-	}
 }
 
 @media only screen and (max-width: 800px) {
